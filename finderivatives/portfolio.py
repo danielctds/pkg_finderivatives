@@ -91,7 +91,9 @@ if __name__ == '__main__':
     # ax.plot(spots, payoff_call2, '--')
     # ax.plot(spots, payoff_put1, '--')
     # ax.plot(spots, payoff_port, 'o')
-    # plt.show()
+    # plt.show()    
+    
+    
     
     # derivatives = port.get_derivatives()
     # print(derivatives)
@@ -116,7 +118,7 @@ if __name__ == '__main__':
     plt.show()
     
 
-iter(port1.get_derivatives())
+# iter(port1.get_derivatives())
 
 
 
