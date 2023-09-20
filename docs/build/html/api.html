@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Documentacion de la API &mdash; finderivatives 202308 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Estrategias con opciones" href="strategies.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            finderivatives
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="european_options.html">Opciones europeas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="portfolios.html">Portafolio de opciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="strategies.html">Estrategias con opciones</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Desarrollo:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Documentacion de la API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#call">Call</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#put">Put</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#portfolio">Portfolio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bullspreadcall">BullSpreadCall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bullspreadput">BullSpreadPut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bearspreadcall">BearSpreadCall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bearspreadput">BearSpreadPut</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">finderivatives</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Documentacion de la API</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/api.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="documentacion-de-la-api">
+<h1>Documentacion de la API<a class="headerlink" href="#documentacion-de-la-api" title="Permalink to this heading"></a></h1>
+<p>🚧 ¡Under construction! 🚧</p>
+<section id="call">
+<h2>Call<a class="headerlink" href="#call" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="finderivatives.european_call.Call">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">finderivatives.european_call.</span></span><span class="sig-name descname"><span class="pre">Call</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">strike</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maturity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">position</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">premium</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#finderivatives.european_call.Call" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="finderivatives.european_call.Call.payoff">
+<span class="sig-name descname"><span class="pre">payoff</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#finderivatives.european_call.Call.payoff" title="Permalink to this definition"></a></dt>
+<dd><p>🚧 ¡Under construction! 🚧</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>DESCRIPTION.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>TYPE</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="finderivatives.european_call.Call.pricing_bs">
+<span class="sig-name descname"><span class="pre">pricing_bs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#finderivatives.european_call.Call.pricing_bs" title="Permalink to this definition"></a></dt>
+<dd><p>🚧 ¡Under construction! 🚧</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>DESCRIPTION.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>TYPE</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="finderivatives.european_call.Call.profit">
+<span class="sig-name descname"><span class="pre">profit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#finderivatives.european_call.Call.profit" title="Permalink to this definition"></a></dt>
+<dd><p>🚧 ¡Under construction! 🚧</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>DESCRIPTION.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>TYPE</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="put">
+<h2>Put<a class="headerlink" href="#put" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="finderivatives.european_put.Put">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">finderivatives.european_put.</span></span><span class="sig-name descname"><span class="pre">Put</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">strike</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maturity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">position</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">premium</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#finderivatives.european_put.Put" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="finderivatives.european_put.Put.payoff">
+<span class="sig-name descname"><span class="pre">payoff</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#finderivatives.european_put.Put.payoff" title="Permalink to this definition"></a></dt>
+<dd><p>🚧 ¡Under construction! 🚧</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>DESCRIPTION.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>TYPE</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="finderivatives.european_put.Put.pricing_bs">
+<span class="sig-name descname"><span class="pre">pricing_bs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#finderivatives.european_put.Put.pricing_bs" title="Permalink to this definition"></a></dt>
+<dd><p>🚧 ¡Under construction! 🚧</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>DESCRIPTION.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>TYPE</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="finderivatives.european_put.Put.profit">
+<span class="sig-name descname"><span class="pre">profit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#finderivatives.european_put.Put.profit" title="Permalink to this definition"></a></dt>
+<dd><p>🚧 ¡Under construction! 🚧</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>DESCRIPTION.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>TYPE</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="portfolio">
+<h2>Portfolio<a class="headerlink" href="#portfolio" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="finderivatives.portfolio.Portfolio">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">finderivatives.portfolio.</span></span><span class="sig-name descname"><span class="pre">Portfolio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">derivatives</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#finderivatives.portfolio.Portfolio" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="finderivatives.portfolio.Portfolio.get_derivatives">
+<span class="sig-name descname"><span class="pre">get_derivatives</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#finderivatives.portfolio.Portfolio.get_derivatives" title="Permalink to this definition"></a></dt>
+<dd><p>🚧 ¡Under construction! 🚧</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>DESCRIPTION.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>TYPE</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="finderivatives.portfolio.Portfolio.payoff">
+<span class="sig-name descname"><span class="pre">payoff</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#finderivatives.portfolio.Portfolio.payoff" title="Permalink to this definition"></a></dt>
+<dd><p>🚧 ¡Under construction! 🚧</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>DESCRIPTION.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>TYPE</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="finderivatives.portfolio.Portfolio.pricing_bs">
+<span class="sig-name descname"><span class="pre">pricing_bs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#finderivatives.portfolio.Portfolio.pricing_bs" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>DESCRIPTION.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>TYPE</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="finderivatives.portfolio.Portfolio.profit">
+<span class="sig-name descname"><span class="pre">profit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#finderivatives.portfolio.Portfolio.profit" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>DESCRIPTION.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>TYPE</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="finderivatives.portfolio.Portfolio.set_market_inputs">
+<span class="sig-name descname"><span class="pre">set_market_inputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spot</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#finderivatives.portfolio.Portfolio.set_market_inputs" title="Permalink to this definition"></a></dt>
+<dd><p>🚧 ¡Under construction! 🚧</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>spot</strong> (<em>TYPE</em>) – DESCRIPTION.</p></li>
+<li><p><strong>vol</strong> (<em>TYPE</em>) – DESCRIPTION.</p></li>
+<li><p><strong>r</strong> (<em>TYPE</em>) – DESCRIPTION.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="bullspreadcall">
+<h2>BullSpreadCall<a class="headerlink" href="#bullspreadcall" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="finderivatives.strategies.BullSpreadCall">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">finderivatives.strategies.</span></span><span class="sig-name descname"><span class="pre">BullSpreadCall</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">strike1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strike2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maturity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">premium1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">premium2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#finderivatives.strategies.BullSpreadCall" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="bullspreadput">
+<h2>BullSpreadPut<a class="headerlink" href="#bullspreadput" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="finderivatives.strategies.BullSpreadPut">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">finderivatives.strategies.</span></span><span class="sig-name descname"><span class="pre">BullSpreadPut</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">strike1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strike2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maturity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">premium1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">premium2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#finderivatives.strategies.BullSpreadPut" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="bearspreadcall">
+<h2>BearSpreadCall<a class="headerlink" href="#bearspreadcall" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="finderivatives.strategies.BearSpreadCall">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">finderivatives.strategies.</span></span><span class="sig-name descname"><span class="pre">BearSpreadCall</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">strike1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strike2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maturity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">premium1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">premium2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#finderivatives.strategies.BearSpreadCall" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="bearspreadput">
+<h2>BearSpreadPut<a class="headerlink" href="#bearspreadput" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="finderivatives.strategies.BearSpreadPut">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">finderivatives.strategies.</span></span><span class="sig-name descname"><span class="pre">BearSpreadPut</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">strike1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strike2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maturity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">premium1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">premium2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#finderivatives.strategies.BearSpreadPut" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="strategies.html" class="btn btn-neutral float-left" title="Estrategias con opciones" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Daniel Chaparro T..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

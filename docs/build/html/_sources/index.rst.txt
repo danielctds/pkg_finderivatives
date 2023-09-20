@@ -4,12 +4,26 @@
    contain the root `toctree` directive.
 
 Welcome to finderivatives's documentation!
-==========================================
+******************************************
+
+🚧 ¡Under construction! 🚧
+
+Descripccion de la libreria
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Contenido:
 
+   european_options
+   portfolios
+   strategies
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Desarrollo:
+
+   api
 
 
 Indices and tables
@@ -20,11 +34,33 @@ Indices and tables
 * :ref:`search`
 
 
-Hola Mundo
+
+
+
+Instalacion
+===========
+
+
+
+Repositorio PyPi
+----------------
+
+.. code-block:: bash
+    :caption: Caption del codigo
+    
+    pip install finderivatives
+
+
+Repositorio Anaconda
+--------------------
+
+.. code-block:: bash
+   
+   conda install -c danielctds finderivatives
+
+
+
+Motivacion
 ==========
 
-.. automodule:: finderivatives.european_call
-   :members:
-
-.. automodule:: finderivatives.european_put
-   :members:
+¡Under construction! 🚧

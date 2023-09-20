@@ -1,0 +1,30 @@
+{% set version = "0.0.5" %}
+
+package:
+  name: finderivatives
+  version: {{ version }}
+
+source:
+  # Relative path to the parent directory.
+  path: ..
+
+requirements:
+  build:
+    - python
+    - numpy >=1.21
+    - scipy >=1.11
+    - setuptools
+
+  run:
+    - python
+    - numpy >=1.21
+    - scipy >=1.11
+
+about:
+  home: https://github.com/danielctds/pkg_finderivatives
+  license: MIT
+  summary: 'Getting image size from png/jpeg/jpeg2000/gif file'
+  description: |
+    Hola.
+  dev_url: https://github.com/danielctds/pkg_finderivatives
+  doc_url: https://pypi.org/project/finderivatives/

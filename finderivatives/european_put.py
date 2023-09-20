@@ -14,16 +14,46 @@ class Put(EuropeanOption):
     
     
     def payoff(self):
+        """
+        🚧 ¡Under construction! 🚧
+        
+
+        Returns
+        -------
+        TYPE
+            DESCRIPTION.
+
+        """
         self._payoff = np.maximum(0, self._strike-self._spot) * self._position
         return self._payoff
     
     
     def profit(self):
+        """
+        🚧 ¡Under construction! 🚧
+        
+
+        Returns
+        -------
+        TYPE
+            DESCRIPTION.
+
+        """
         self._profit = self.payoff() - self._premium * self._position
         return self._profit
     
     
     def pricing_bs(self):
+        """
+        🚧 ¡Under construction! 🚧
+                
+
+        Returns
+        -------
+        TYPE
+            DESCRIPTION.
+
+        """
         # Probabilities
         self._d1 = (np.log(self._spot/self._strike) +
                     (self._r - (self._vol**2)/2) / self._dt) \
@@ -37,6 +67,9 @@ class Put(EuropeanOption):
             - self._spot * self._n_d1
             ) * self._position
         return self._pricing
-
- 
-
+    
+    
+#%% Direct execution
+if __name__ == '__main__':
+    print(' Direct execution ... \n')
+    

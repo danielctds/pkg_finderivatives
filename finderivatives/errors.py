@@ -51,9 +51,7 @@ class SpotError(Exception):
         self.value_type = type(value)
 
 
+#%% Direct execution
 if __name__ == '__main__':
-    print(' Ejecucion directa ... \n')
+    print(' Direct execution ... \n')
     
-    raise PositionError()
-    print(StrikeError())
-    print(SpotError())

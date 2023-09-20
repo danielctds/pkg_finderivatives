@@ -105,14 +105,7 @@ def validate_spot(spot):
         raise error
 
 
-
+#%% Direct execution
 if __name__ == '__main__':
-    print(' Ejecucion directa ... \n')
-    # a = validate_position(0)
-    # b = validate_spot([1, 2, 3, 4, '1'])
-    # print('Ejecucion completa')
-
-
-
-
-
+    print(' Direct execution ... \n')
+    
