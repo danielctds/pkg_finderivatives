@@ -3,11 +3,12 @@ from finderivatives import validations as val
 
 class UnderlyingAsset():
     
-    def __init__(self, spot):
+    def __init__(self, spot, position):
         self._spot = val.validate_spot(spot)
-        self._payoff = self._spot
-        self._profit = self._spot
-        self._pricing = self._spot
+        self._position = val.validate_position(position)
+        self._payoff = self._spot * self._position
+        self._profit = self._spot * self._position
+        self._pricing = self._spot * self._position
         
     
     def payoff(self):

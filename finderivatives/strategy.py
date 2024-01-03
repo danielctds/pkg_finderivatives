@@ -23,8 +23,17 @@ from finderivatives.portfolio import Portfolio
 
 #### Bull Spread Call
 class BullSpreadCall(Portfolio):
-    
+        
     def __init__(self, strike1, strike2, maturity, premium1=0, premium2=0):
+        """_summary_
+
+        Args:
+            strike1 (_type_): _description_
+            strike2 (_type_): _description_
+            maturity (_type_): _description_
+            premium1 (int, optional): _description_. Defaults to 0.
+            premium2 (int, optional): _description_. Defaults to 0.
+        """
         self._call01 = Call(strike=strike1,
                             maturity=maturity,
                             position=1,
