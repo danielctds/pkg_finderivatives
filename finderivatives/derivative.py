@@ -25,16 +25,16 @@ class EuropeanOption():
         return 'xxxxx'
     
     
-    def __add__(self, other):
-        payoff = self.payoff() + other.payoff()
-        profit = self.profit() + other.profit()
-        pricing_bs = self.pricing_bs() + other.pricing_bs()
-        addition = {
-            'payoff': payoff,
-            'profit': profit,
-            'pricing_bs': pricing_bs
-            }
-        return addition
+#    def __add__(self, other):
+#        payoff = self.payoff() + other.payoff()
+#        profit = self.profit() + other.profit()
+#        pricing_bs = self.pricing_bs() + other.pricing_bs()
+#        addition = {
+#            'payoff': payoff,
+#            'profit': profit,
+#            'pricing_bs': pricing_bs
+#            }
+#        return addition
     
     
     def get_strike(self):

@@ -35,9 +35,9 @@ def validate_strike(strike):
         else:
             raise TypeError
             
-    except TypeError:
+    except TypeError as exc:
         message = 'The argument "strike" must be of type int or float'
-        raise TypeError(message)
+        raise TypeError(message) from exc
 
 
 def validate_premium(premium):
