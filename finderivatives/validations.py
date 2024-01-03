@@ -105,6 +105,27 @@ def validate_spot(spot):
         raise error
 
 
+
+def validate_strikes_bull_spread_call(strike1, strike2):
+    strike1 = validate_strike(strike1)
+    strike2 = validate_strike(strike2)
+    
+    try:
+        # Validate value
+        if strike1 >= strike2:
+            raise ValueError
+            
+        else:
+            return strike1, strike2
+
+    except ValueError:
+        message = 'The "strike1" must be less than "strike2"'
+        raise ValueError(message)
+
+    
+
+
+
 #%% Direct execution
 if __name__ == '__main__':
     print(' Direct execution ... \n')

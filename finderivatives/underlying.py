@@ -3,13 +3,22 @@ from finderivatives import validations as val
 
 class UnderlyingAsset():
     
-    def __init__(self, spot, position):
-        self._spot = val.validate_spot(spot)
+    def __init__(self, position):
         self._position = val.validate_position(position)
-        self._payoff = self._spot * self._position
-        self._profit = self._spot * self._position
-        self._pricing = self._spot * self._position
         
+    def set_spot(self, spot):
+        self._spot = val.validate_spot(spot)
+    
+    def set_volatility(self, vol):
+        self._vol = vol
+    
+    def set_r(self, r):
+        self._r = r
+    
+    def set_market_inputs(self, spot, vol, r):
+        self.set_spot(spot)
+        self.set_volatility(vol)
+        self.set_r(r)
     
     def payoff(self):
         """
@@ -21,6 +30,7 @@ class UnderlyingAsset():
             DESCRIPTION.
 
         """
+        self._payoff = self._spot * self._position
         return self._payoff
     
     
@@ -34,6 +44,7 @@ class UnderlyingAsset():
             DESCRIPTION.
 
         """
+        self._profit = self._spot * self._position
         return self._profit
     
     
@@ -47,6 +58,7 @@ class UnderlyingAsset():
             DESCRIPTION.
 
         """
+        self._pricing = self._spot * self._position
         return self._pricing
 
 
