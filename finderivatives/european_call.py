@@ -8,13 +8,22 @@ from finderivatives.derivative import EuropeanOption
 
 #%% Call
 class Call(EuropeanOption):
-    
+    """Opcion Europea de Compra (Call)
+
+    Args:
+        strike (int, float or list): _description_
+        maturity (int or float): _description_
+        position (int or float): _description_
+        premium (int, optional): _description_. Defaults to 0.
+    """
     def __init__(self, strike, maturity, position, premium=0):
         super().__init__(strike, maturity, position, premium)
-    
-    
+        
+        
     def payoff(self):
         """
+        Función de pago del derivado a partir de uno o varios precios spot.
+        
         🚧 ¡Under construction! 🚧
 
         Returns
@@ -29,9 +38,10 @@ class Call(EuropeanOption):
     
     def profit(self):
         """
+        Función del beneficio o perdida del derivado a partir de uno o varios precios spot.
+        
         🚧 ¡Under construction! 🚧
         
-
         Returns
         -------
         TYPE
@@ -44,13 +54,15 @@ class Call(EuropeanOption):
     
     def pricing_bs(self):
         """
+        Función de valoración del derivado bajo el modelo de Black-Scholes.
+        
         🚧 ¡Under construction! 🚧
         
 
         Returns
         -------
         TYPE
-            DESCRIPTION.
+            Precio justo de la opción.
 
         """
         # Probabilities

@@ -7,7 +7,13 @@ from finderivatives import validations as val
 
 #%% Covered Call
 class CoveredCall(Portfolio):
-    
+    """_summary_ 🚧 ¡Under construction! 🚧
+
+    Args:
+        strike (_type_): _description_
+        maturity (_type_): _description_
+        premium (int, optional): _description_. Defaults to 0.
+    """
     def __init__(self, strike, maturity, premium=0):
         self._call = Call(strike=strike,
                           maturity=maturity,
@@ -21,7 +27,13 @@ class CoveredCall(Portfolio):
 #%% Reverse Covered Call
 
 class ReverseCoveredCall(Portfolio):
-    
+    """_summary_ 🚧 ¡Under construction! 🚧
+
+    Args:
+        strike (_type_): _description_
+        maturity (_type_): _description_
+        premium (int, optional): _description_. Defaults to 0.
+    """
     def __init__(self, strike, maturity, premium=0):
         self._call = Call(strike=strike,
                           maturity=maturity,
@@ -34,7 +46,13 @@ class ReverseCoveredCall(Portfolio):
 #%% Protective Put
 
 class ProtectivePut(Portfolio):
-    
+    """_summary_ 🚧 ¡Under construction! 🚧
+
+    Args:
+        strike (_type_): _description_
+        maturity (_type_): _description_
+        premium (int, optional): _description_. Defaults to 0.
+    """
     def __init__(self, strike, maturity, premium=0):
         self._put = Put(strike=strike,
                           maturity=maturity,
@@ -47,7 +65,13 @@ class ProtectivePut(Portfolio):
 
 
 class ReverseProtectivePut(Portfolio):
-    
+    """_summary_ 🚧 ¡Under construction! 🚧
+
+    Args:
+        strike (_type_): _description_
+        maturity (_type_): _description_
+        premium (int, optional): _description_. Defaults to 0.
+    """
     def __init__(self, strike, maturity, premium=0):
         self._put = Put(strike=strike,
                           maturity=maturity,
@@ -62,19 +86,17 @@ class ReverseProtectivePut(Portfolio):
 
 #### Bull Spread Call
 class BullSpreadCall(Portfolio):
-        
-    def __init__(self, strike1, strike2, maturity, premium1=0, premium2=0):
-        """_summary_
+    """_summary_ 🚧 ¡Under construction! 🚧
 
-        Args:
-            strike1 (_type_): _description_
-            strike2 (_type_): _description_
-            maturity (_type_): _description_
-            premium1 (int, optional): _description_. Defaults to 0.
-            premium2 (int, optional): _description_. Defaults to 0.
-        """
+    Args:
+        strike1 (_type_): _description_
+        strike2 (_type_): _description_
+        maturity (_type_): _description_
+        premium1 (int, optional): _description_. Defaults to 0.
+        premium2 (int, optional): _description_. Defaults to 0.
+    """
+    def __init__(self, strike1, strike2, maturity, premium1=0, premium2=0):
         strike1, strike2 = val.validate_strikes(strike1, strike2, "Less")
-        
         self._call01 = Call(strike=strike1,
                             maturity=maturity,
                             position=1,
@@ -91,11 +113,17 @@ class BullSpreadCall(Portfolio):
 
 #### Bull Spread Put
 class BullSpreadPut(Portfolio):
-    
+    """_summary_ 🚧 ¡Under construction! 🚧
+
+    Args:
+        strike1 (_type_): _description_
+        strike2 (_type_): _description_
+        maturity (_type_): _description_
+        premium1 (int, optional): _description_. Defaults to 0.
+        premium2 (int, optional): _description_. Defaults to 0.
+    """
     def __init__(self, strike1, strike2, maturity, premium1=0, premium2=0):
-        
         strike1, strike2 = val.validate_strikes(strike1, strike2, "Less")
-        
         self._put01 = Put(strike=strike1,
                             maturity=maturity,
                             position=1,
@@ -112,11 +140,17 @@ class BullSpreadPut(Portfolio):
 
 #### Bear Spread Call
 class BearSpreadCall(Portfolio):
-    
+    """_summary_ 🚧 ¡Under construction! 🚧
+
+    Args:
+        strike1 (_type_): _description_
+        strike2 (_type_): _description_
+        maturity (_type_): _description_
+        premium1 (int, optional): _description_. Defaults to 0.
+        premium2 (int, optional): _description_. Defaults to 0.
+    """
     def __init__(self, strike1, strike2, maturity, premium1=0, premium2=0):
-        
         strike1, strike2 = val.validate_strikes(strike1, strike2, "Greater")
-        
         self._call01 = Call(strike=strike1,
                             maturity=maturity,
                             position=1,
@@ -130,11 +164,17 @@ class BearSpreadCall(Portfolio):
 
 #### Bear Spread Put
 class BearSpreadPut(Portfolio):
-    
+    """_summary_ 🚧 ¡Under construction! 🚧
+
+    Args:
+        strike1 (_type_): _description_
+        strike2 (_type_): _description_
+        maturity (_type_): _description_
+        premium1 (int, optional): _description_. Defaults to 0.
+        premium2 (int, optional): _description_. Defaults to 0.
+    """
     def __init__(self, strike1, strike2, maturity, premium1=0, premium2=0):
-        
         strike1, strike2 = val.validate_strikes(strike1, strike2, "Greater")
-        
         self._put01 = Put(strike=strike1,
                             maturity=maturity,
                             position=1,
@@ -152,12 +192,22 @@ class BearSpreadPut(Portfolio):
     ###Precio de compra: X - a y X + a - Precio de venta: X 
 
 class ButterflySpreadCall(Portfolio):
-    
+    """_summary_ 🚧 ¡Under construction! 🚧
+
+    Args:
+        strike1 (_type_): _description_
+        strike2 (_type_): _description_
+        strike3 (_type_): _description_
+        strike4 (_type_): _description_
+        maturity (_type_): _description_
+        premium1 (int, optional): _description_. Defaults to 0.
+        premium2 (int, optional): _description_. Defaults to 0.
+        premium3 (int, optional): _description_. Defaults to 0.
+        premium4 (int, optional): _description_. Defaults to 0.
+    """
     def __init__(self, strike1, strike2, strike3, strike4, maturity, premium1 = 0,
                  premium2 = 0, premium3 = 0, premium4 = 0):
-            
         strike1, strike2, strike3, strike4 = val.validate_strikes_butterly(strike1, strike2, strike3, strike4)
-        
         self._call01 = Call(strike=strike1,
                             maturity=maturity,
                             position=1,
@@ -180,12 +230,22 @@ class ButterflySpreadCall(Portfolio):
 
 #### Butterfly Spread Put
 class ButterflySpreadPut(Portfolio):
-    
+    """_summary_ 🚧 ¡Under construction! 🚧
+
+    Args:
+        strike1 (_type_): _description_
+        strike2 (_type_): _description_
+        strike3 (_type_): _description_
+        strike4 (_type_): _description_
+        maturity (_type_): _description_
+        premium1 (int, optional): _description_. Defaults to 0.
+        premium2 (int, optional): _description_. Defaults to 0.
+        premium3 (int, optional): _description_. Defaults to 0.
+        premium4 (int, optional): _description_. Defaults to 0.
+    """
     def __init__(self, strike1, strike2, strike3, strike4, maturity, premium1 = 0,
                  premium2 = 0, premium3 = 0, premium4 = 0):
-        
         strike1, strike2, strike3, strike4 = val.validate_strikes_butterly(strike1, strike2, strike3, strike4)
-        
         self._put01 = Put(strike=strike1,
                             maturity=maturity,
                             position=1,
@@ -209,34 +269,46 @@ class ButterflySpreadPut(Portfolio):
     #### Precios de strike iguales
     
 class StraddleSpread(Portfolio):
-    
+    """_summary_ 🚧 ¡Under construction! 🚧
+
+    Args:
+        strike1 (_type_): _description_
+        strike2 (_type_): _description_
+        maturity (_type_): _description_
+        premium1 (int, optional): _description_. Defaults to 0.
+        premium2 (int, optional): _description_. Defaults to 0.
+    """
     def __init__(self, strike1, strike2, maturity, premium1 = 0, premium2 = 0):
-        
         strike1, strike2 = val.validate_strikes(strike1, strike2, "Equal")
-        
         self._call01 = Call(strike=strike1,
                             maturity=maturity,
                             position=1,
                             premium=premium1)
-        
         self._put01 = Put(strike=strike2,
                             maturity=maturity,
                             position=1,
                             premium=premium2)
-        
         super().__init__(self._call01, self._put01)
 
 
 #%% Strip
 
 class StripSpread(Portfolio):
-    
+    """_summary_ 🚧 ¡Under construction! 🚧
+
+    Args:
+        strike1 (_type_): _description_
+        strike2 (_type_): _description_
+        strike3 (_type_): _description_
+        maturity (_type_): _description_
+        premium1 (int, optional): _description_. Defaults to 0.
+        premium2 (int, optional): _description_. Defaults to 0.
+        premium3 (int, optional): _description_. Defaults to 0.
+    """
     def __init__(self, strike1, strike2, strike3, maturity, premium1 = 0, 
                  premium2 = 0, premium3 = 0):
-        
         strike1, strike2 = val.validate_strikes(strike1, strike2, "Equal")
         strike1, strike3 = val.validate_strikes(strike1, strike3, "Equal")
-        
         self._call01 = Call(strike=strike1,
                             maturity=maturity,
                             position=1,
@@ -257,23 +329,29 @@ class StripSpread(Portfolio):
 #%% Strap
 
 class StrapSpread(Portfolio):
-    
+    """_summary_ 🚧 ¡Under construction! 🚧
+
+    Args:
+        strike1 (_type_): _description_
+        strike2 (_type_): _description_
+        strike3 (_type_): _description_
+        maturity (_type_): _description_
+        premium1 (int, optional): _description_. Defaults to 0.
+        premium2 (int, optional): _description_. Defaults to 0.
+        premium3 (int, optional): _description_. Defaults to 0.
+    """
     def __init__(self, strike1, strike2, strike3, maturity, premium1 = 0, 
                  premium2 = 0, premium3 = 0):
-        
         strike1, strike2 = val.validate_strikes(strike1, strike2, "Equal")
         strike1, strike3 = val.validate_strikes(strike1, strike3, "Equal")
-        
         self._call01 = Call(strike=strike1,
                             maturity=maturity,
                             position=1,
                             premium=premium1)
-        
         self._call02 = Call(strike=strike2,
                             maturity=maturity,
                             position=1,
                             premium=premium2)
-        
         self._put01 = Put(strike=strike3,
                             maturity=maturity,
                             position=1,
@@ -283,24 +361,26 @@ class StrapSpread(Portfolio):
 #%% Strangle
     
 class StrangleSpread(Portfolio):
-    
+    """_summary_ 🚧 ¡Under construction! 🚧
+
+    Args:
+        strike1 (_type_): _description_
+        strike2 (_type_): _description_
+        maturity (_type_): _description_
+        premium1 (int, optional): _description_. Defaults to 0.
+        premium2 (int, optional): _description_. Defaults to 0.
+    """
     def __init__(self, strike1, strike2, maturity, premium1 = 0, premium2 = 0):
-        
-        
         strike1, strike2 = val.validate_strikes(strike1, strike2, "Greater")
-        
         self._call01 = Call(strike=strike1,
                             maturity=maturity,
                             position=1,
                             premium=premium1)
-        
         self._put01 = Put(strike=strike2,
                             maturity=maturity,
                             position=1,
                             premium=premium2)
-        
         super().__init__(self._call01, self._put01)
-
 
 
 

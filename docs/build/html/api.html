@@ -53,10 +53,20 @@
 <li class="toctree-l2"><a class="reference internal" href="#call">Call</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#put">Put</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#portfolio">Portfolio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#coveredcall">CoveredCall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reversecoveredcall">ReverseCoveredCall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#protectiveput">ProtectivePut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reverseprotectiveput">ReverseProtectivePut</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#bullspreadcall">BullSpreadCall</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#bullspreadput">BullSpreadPut</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#bearspreadcall">BearSpreadCall</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#bearspreadput">BearSpreadPut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#butterflyspreadcall">ButterflySpreadCall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#butterflyspreadput">ButterflySpreadPut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#straddlespread">StraddleSpread</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#stripspread">StripSpread</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#strapspread">StrapSpread</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#stranglespread">StrangleSpread</a></li>
 </ul>
 </li>
 </ul>
@@ -93,10 +103,22 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="finderivatives.european_call.Call">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">finderivatives.european_call.</span></span><span class="sig-name descname"><span class="pre">Call</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">strike</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maturity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">position</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">premium</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#finderivatives.european_call.Call" title="Permalink to this definition"></a></dt>
-<dd><dl class="py method">
+<dd><p>Opcion Europea de Compra (Call)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>strike</strong> (<em>int</em><em>, </em><em>float</em><em> or </em><em>list</em>) – _description_</p></li>
+<li><p><strong>maturity</strong> (<em>int</em><em> or </em><em>float</em>) – _description_</p></li>
+<li><p><strong>position</strong> (<em>int</em><em> or </em><em>float</em>) – _description_</p></li>
+<li><p><strong>premium</strong> (<em>int</em><em>, </em><em>optional</em>) – _description_. Defaults to 0.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
 <dt class="sig sig-object py" id="finderivatives.european_call.Call.payoff">
 <span class="sig-name descname"><span class="pre">payoff</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#finderivatives.european_call.Call.payoff" title="Permalink to this definition"></a></dt>
-<dd><p>🚧 ¡Under construction! 🚧</p>
+<dd><p>Función de pago del derivado a partir de uno o varios precios spot.</p>
+<p>🚧 ¡Under construction! 🚧</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>DESCRIPTION.</p>
@@ -110,10 +132,11 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="finderivatives.european_call.Call.pricing_bs">
 <span class="sig-name descname"><span class="pre">pricing_bs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#finderivatives.european_call.Call.pricing_bs" title="Permalink to this definition"></a></dt>
-<dd><p>🚧 ¡Under construction! 🚧</p>
+<dd><p>Función de valoración del derivado bajo el modelo de Black-Scholes.</p>
+<p>🚧 ¡Under construction! 🚧</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>DESCRIPTION.</p>
+<dd class="field-odd"><p>Precio justo de la opción.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>TYPE</p>
@@ -124,7 +147,8 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="finderivatives.european_call.Call.profit">
 <span class="sig-name descname"><span class="pre">profit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#finderivatives.european_call.Call.profit" title="Permalink to this definition"></a></dt>
-<dd><p>🚧 ¡Under construction! 🚧</p>
+<dd><p>Función del beneficio o perdida del derivado a partir de uno o varios precios spot.</p>
+<p>🚧 ¡Under construction! 🚧</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>DESCRIPTION.</p>
@@ -268,12 +292,96 @@
 </dd></dl>
 
 </section>
+<section id="coveredcall">
+<h2>CoveredCall<a class="headerlink" href="#coveredcall" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="finderivatives.strategies.CoveredCall">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">finderivatives.strategies.</span></span><span class="sig-name descname"><span class="pre">CoveredCall</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">strike</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maturity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">premium</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#finderivatives.strategies.CoveredCall" title="Permalink to this definition"></a></dt>
+<dd><p>_summary_ 🚧 ¡Under construction! 🚧</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>strike</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>maturity</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>premium</strong> (<em>int</em><em>, </em><em>optional</em>) – _description_. Defaults to 0.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="reversecoveredcall">
+<h2>ReverseCoveredCall<a class="headerlink" href="#reversecoveredcall" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="finderivatives.strategies.ReverseCoveredCall">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">finderivatives.strategies.</span></span><span class="sig-name descname"><span class="pre">ReverseCoveredCall</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">strike</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maturity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">premium</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#finderivatives.strategies.ReverseCoveredCall" title="Permalink to this definition"></a></dt>
+<dd><p>_summary_ 🚧 ¡Under construction! 🚧</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>strike</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>maturity</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>premium</strong> (<em>int</em><em>, </em><em>optional</em>) – _description_. Defaults to 0.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="protectiveput">
+<h2>ProtectivePut<a class="headerlink" href="#protectiveput" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="finderivatives.strategies.ProtectivePut">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">finderivatives.strategies.</span></span><span class="sig-name descname"><span class="pre">ProtectivePut</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">strike</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maturity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">premium</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#finderivatives.strategies.ProtectivePut" title="Permalink to this definition"></a></dt>
+<dd><p>_summary_ 🚧 ¡Under construction! 🚧</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>strike</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>maturity</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>premium</strong> (<em>int</em><em>, </em><em>optional</em>) – _description_. Defaults to 0.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="reverseprotectiveput">
+<h2>ReverseProtectivePut<a class="headerlink" href="#reverseprotectiveput" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="finderivatives.strategies.ReverseProtectivePut">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">finderivatives.strategies.</span></span><span class="sig-name descname"><span class="pre">ReverseProtectivePut</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">strike</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maturity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">premium</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#finderivatives.strategies.ReverseProtectivePut" title="Permalink to this definition"></a></dt>
+<dd><p>_summary_ 🚧 ¡Under construction! 🚧</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>strike</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>maturity</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>premium</strong> (<em>int</em><em>, </em><em>optional</em>) – _description_. Defaults to 0.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
 <section id="bullspreadcall">
 <h2>BullSpreadCall<a class="headerlink" href="#bullspreadcall" title="Permalink to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="finderivatives.strategies.BullSpreadCall">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">finderivatives.strategies.</span></span><span class="sig-name descname"><span class="pre">BullSpreadCall</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">strike1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strike2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maturity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">premium1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">premium2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#finderivatives.strategies.BullSpreadCall" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>_summary_ 🚧 ¡Under construction! 🚧</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>strike1</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>strike2</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>maturity</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>premium1</strong> (<em>int</em><em>, </em><em>optional</em>) – _description_. Defaults to 0.</p></li>
+<li><p><strong>premium2</strong> (<em>int</em><em>, </em><em>optional</em>) – _description_. Defaults to 0.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 </section>
 <section id="bullspreadput">
@@ -281,7 +389,19 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="finderivatives.strategies.BullSpreadPut">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">finderivatives.strategies.</span></span><span class="sig-name descname"><span class="pre">BullSpreadPut</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">strike1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strike2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maturity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">premium1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">premium2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#finderivatives.strategies.BullSpreadPut" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>_summary_ 🚧 ¡Under construction! 🚧</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>strike1</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>strike2</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>maturity</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>premium1</strong> (<em>int</em><em>, </em><em>optional</em>) – _description_. Defaults to 0.</p></li>
+<li><p><strong>premium2</strong> (<em>int</em><em>, </em><em>optional</em>) – _description_. Defaults to 0.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 </section>
 <section id="bearspreadcall">
@@ -289,7 +409,19 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="finderivatives.strategies.BearSpreadCall">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">finderivatives.strategies.</span></span><span class="sig-name descname"><span class="pre">BearSpreadCall</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">strike1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strike2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maturity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">premium1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">premium2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#finderivatives.strategies.BearSpreadCall" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>_summary_ 🚧 ¡Under construction! 🚧</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>strike1</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>strike2</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>maturity</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>premium1</strong> (<em>int</em><em>, </em><em>optional</em>) – _description_. Defaults to 0.</p></li>
+<li><p><strong>premium2</strong> (<em>int</em><em>, </em><em>optional</em>) – _description_. Defaults to 0.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 </section>
 <section id="bearspreadput">
@@ -297,7 +429,151 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="finderivatives.strategies.BearSpreadPut">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">finderivatives.strategies.</span></span><span class="sig-name descname"><span class="pre">BearSpreadPut</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">strike1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strike2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maturity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">premium1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">premium2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#finderivatives.strategies.BearSpreadPut" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>_summary_ 🚧 ¡Under construction! 🚧</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>strike1</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>strike2</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>maturity</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>premium1</strong> (<em>int</em><em>, </em><em>optional</em>) – _description_. Defaults to 0.</p></li>
+<li><p><strong>premium2</strong> (<em>int</em><em>, </em><em>optional</em>) – _description_. Defaults to 0.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="butterflyspreadcall">
+<h2>ButterflySpreadCall<a class="headerlink" href="#butterflyspreadcall" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="finderivatives.strategies.ButterflySpreadCall">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">finderivatives.strategies.</span></span><span class="sig-name descname"><span class="pre">ButterflySpreadCall</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">strike1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strike2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strike3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strike4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maturity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">premium1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">premium2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">premium3</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">premium4</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#finderivatives.strategies.ButterflySpreadCall" title="Permalink to this definition"></a></dt>
+<dd><p>_summary_ 🚧 ¡Under construction! 🚧</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>strike1</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>strike2</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>strike3</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>strike4</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>maturity</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>premium1</strong> (<em>int</em><em>, </em><em>optional</em>) – _description_. Defaults to 0.</p></li>
+<li><p><strong>premium2</strong> (<em>int</em><em>, </em><em>optional</em>) – _description_. Defaults to 0.</p></li>
+<li><p><strong>premium3</strong> (<em>int</em><em>, </em><em>optional</em>) – _description_. Defaults to 0.</p></li>
+<li><p><strong>premium4</strong> (<em>int</em><em>, </em><em>optional</em>) – _description_. Defaults to 0.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="butterflyspreadput">
+<h2>ButterflySpreadPut<a class="headerlink" href="#butterflyspreadput" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="finderivatives.strategies.ButterflySpreadPut">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">finderivatives.strategies.</span></span><span class="sig-name descname"><span class="pre">ButterflySpreadPut</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">strike1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strike2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strike3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strike4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maturity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">premium1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">premium2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">premium3</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">premium4</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#finderivatives.strategies.ButterflySpreadPut" title="Permalink to this definition"></a></dt>
+<dd><p>_summary_ 🚧 ¡Under construction! 🚧</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>strike1</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>strike2</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>strike3</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>strike4</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>maturity</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>premium1</strong> (<em>int</em><em>, </em><em>optional</em>) – _description_. Defaults to 0.</p></li>
+<li><p><strong>premium2</strong> (<em>int</em><em>, </em><em>optional</em>) – _description_. Defaults to 0.</p></li>
+<li><p><strong>premium3</strong> (<em>int</em><em>, </em><em>optional</em>) – _description_. Defaults to 0.</p></li>
+<li><p><strong>premium4</strong> (<em>int</em><em>, </em><em>optional</em>) – _description_. Defaults to 0.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="straddlespread">
+<h2>StraddleSpread<a class="headerlink" href="#straddlespread" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="finderivatives.strategies.StraddleSpread">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">finderivatives.strategies.</span></span><span class="sig-name descname"><span class="pre">StraddleSpread</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">strike1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strike2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maturity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">premium1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">premium2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#finderivatives.strategies.StraddleSpread" title="Permalink to this definition"></a></dt>
+<dd><p>_summary_ 🚧 ¡Under construction! 🚧</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>strike1</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>strike2</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>maturity</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>premium1</strong> (<em>int</em><em>, </em><em>optional</em>) – _description_. Defaults to 0.</p></li>
+<li><p><strong>premium2</strong> (<em>int</em><em>, </em><em>optional</em>) – _description_. Defaults to 0.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="stripspread">
+<h2>StripSpread<a class="headerlink" href="#stripspread" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="finderivatives.strategies.StripSpread">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">finderivatives.strategies.</span></span><span class="sig-name descname"><span class="pre">StripSpread</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">strike1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strike2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strike3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maturity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">premium1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">premium2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">premium3</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#finderivatives.strategies.StripSpread" title="Permalink to this definition"></a></dt>
+<dd><p>_summary_ 🚧 ¡Under construction! 🚧</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>strike1</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>strike2</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>strike3</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>maturity</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>premium1</strong> (<em>int</em><em>, </em><em>optional</em>) – _description_. Defaults to 0.</p></li>
+<li><p><strong>premium2</strong> (<em>int</em><em>, </em><em>optional</em>) – _description_. Defaults to 0.</p></li>
+<li><p><strong>premium3</strong> (<em>int</em><em>, </em><em>optional</em>) – _description_. Defaults to 0.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="strapspread">
+<h2>StrapSpread<a class="headerlink" href="#strapspread" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="finderivatives.strategies.StrapSpread">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">finderivatives.strategies.</span></span><span class="sig-name descname"><span class="pre">StrapSpread</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">strike1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strike2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strike3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maturity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">premium1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">premium2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">premium3</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#finderivatives.strategies.StrapSpread" title="Permalink to this definition"></a></dt>
+<dd><p>_summary_ 🚧 ¡Under construction! 🚧</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>strike1</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>strike2</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>strike3</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>maturity</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>premium1</strong> (<em>int</em><em>, </em><em>optional</em>) – _description_. Defaults to 0.</p></li>
+<li><p><strong>premium2</strong> (<em>int</em><em>, </em><em>optional</em>) – _description_. Defaults to 0.</p></li>
+<li><p><strong>premium3</strong> (<em>int</em><em>, </em><em>optional</em>) – _description_. Defaults to 0.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="stranglespread">
+<h2>StrangleSpread<a class="headerlink" href="#stranglespread" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="finderivatives.strategies.StrangleSpread">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">finderivatives.strategies.</span></span><span class="sig-name descname"><span class="pre">StrangleSpread</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">strike1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strike2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maturity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">premium1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">premium2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#finderivatives.strategies.StrangleSpread" title="Permalink to this definition"></a></dt>
+<dd><p>_summary_ 🚧 ¡Under construction! 🚧</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>strike1</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>strike2</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>maturity</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>premium1</strong> (<em>int</em><em>, </em><em>optional</em>) – _description_. Defaults to 0.</p></li>
+<li><p><strong>premium2</strong> (<em>int</em><em>, </em><em>optional</em>) – _description_. Defaults to 0.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 </section>
 </section>
