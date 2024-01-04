@@ -20,13 +20,41 @@ class CoveredCall(Portfolio):
 
 #%% Reverse Covered Call
 
+class ReverseCoveredCall(Portfolio):
+    
+    def __init__(self, strike, maturity, premium=0):
+        self._call = Call(strike=strike,
+                          maturity=maturity,
+                          position=1,
+                          premium=premium)
+        self._underlying = UnderlyingAsset(position=-1)
+        super().__init__(self._call, self._underlying)
 
 
 #%% Protective Put
 
+class ProtectivePut(Portfolio):
+    
+    def __init__(self, strike, maturity, premium=0):
+        self._put = Put(strike=strike,
+                          maturity=maturity,
+                          position = 1,
+                          premium = premium)
+        self._underlying = UnderlyingAsset(position=1)
+        super().__init__(self._put, self._underlying)
+
+#%% Reverse Protective Put
 
 
-#%% Revers Protective Put
+class ReverseProtectivePut(Portfolio):
+    
+    def __init__(self, strike, maturity, premium=0):
+        self._put = Put(strike=strike,
+                          maturity=maturity,
+                          position = -1,
+                          premium = premium)
+        self._underlying = UnderlyingAsset(position=-1)
+        super().__init__(self._put, self._underlying)
 
 
 
@@ -45,7 +73,7 @@ class BullSpreadCall(Portfolio):
             premium1 (int, optional): _description_. Defaults to 0.
             premium2 (int, optional): _description_. Defaults to 0.
         """
-        strike1, strike2 = val.validate_strikes_bull_spread_call(strike1, strike2)
+        strike1, strike2 = val.validate_strikes(strike1, strike2, "Less")
         
         self._call01 = Call(strike=strike1,
                             maturity=maturity,
@@ -59,11 +87,15 @@ class BullSpreadCall(Portfolio):
         
         super().__init__(self._call01, self._call02)
         
+        
 
 #### Bull Spread Put
 class BullSpreadPut(Portfolio):
     
     def __init__(self, strike1, strike2, maturity, premium1=0, premium2=0):
+        
+        strike1, strike2 = val.validate_strikes(strike1, strike2, "Less")
+        
         self._put01 = Put(strike=strike1,
                             maturity=maturity,
                             position=1,
@@ -82,13 +114,16 @@ class BullSpreadPut(Portfolio):
 class BearSpreadCall(Portfolio):
     
     def __init__(self, strike1, strike2, maturity, premium1=0, premium2=0):
+        
+        strike1, strike2 = val.validate_strikes(strike1, strike2, "Greater")
+        
         self._call01 = Call(strike=strike1,
                             maturity=maturity,
                             position=1,
                             premium=premium1)
         self._call02 = Call(strike=strike2,
                             maturity=maturity,
-                            position=1,
+                            position=-1,
                             premium=premium2)
         super().__init__(self._call01, self._call02)
         
@@ -97,6 +132,9 @@ class BearSpreadCall(Portfolio):
 class BearSpreadPut(Portfolio):
     
     def __init__(self, strike1, strike2, maturity, premium1=0, premium2=0):
+        
+        strike1, strike2 = val.validate_strikes(strike1, strike2, "Greater")
+        
         self._put01 = Put(strike=strike1,
                             maturity=maturity,
                             position=1,
@@ -117,6 +155,8 @@ class ButterflySpreadCall(Portfolio):
     
     def __init__(self, strike1, strike2, strike3, strike4, maturity, premium1 = 0,
                  premium2 = 0, premium3 = 0, premium4 = 0):
+            
+        strike1, strike2, strike3, strike4 = val.validate_strikes_butterly(strike1, strike2, strike3, strike4)
         
         self._call01 = Call(strike=strike1,
                             maturity=maturity,
@@ -144,6 +184,8 @@ class ButterflySpreadPut(Portfolio):
     def __init__(self, strike1, strike2, strike3, strike4, maturity, premium1 = 0,
                  premium2 = 0, premium3 = 0, premium4 = 0):
         
+        strike1, strike2, strike3, strike4 = val.validate_strikes_butterly(strike1, strike2, strike3, strike4)
+        
         self._put01 = Put(strike=strike1,
                             maturity=maturity,
                             position=1,
@@ -169,6 +211,9 @@ class ButterflySpreadPut(Portfolio):
 class StraddleSpread(Portfolio):
     
     def __init__(self, strike1, strike2, maturity, premium1 = 0, premium2 = 0):
+        
+        strike1, strike2 = val.validate_strikes(strike1, strike2, "Equal")
+        
         self._call01 = Call(strike=strike1,
                             maturity=maturity,
                             position=1,
@@ -183,12 +228,14 @@ class StraddleSpread(Portfolio):
 
 
 #%% Strip
-    #### Precios de strike iguales
 
 class StripSpread(Portfolio):
     
     def __init__(self, strike1, strike2, strike3, maturity, premium1 = 0, 
                  premium2 = 0, premium3 = 0):
+        
+        strike1, strike2 = val.validate_strikes(strike1, strike2, "Equal")
+        strike1, strike3 = val.validate_strikes(strike1, strike3, "Equal")
         
         self._call01 = Call(strike=strike1,
                             maturity=maturity,
@@ -208,12 +255,14 @@ class StripSpread(Portfolio):
 
 
 #%% Strap
-    #### Precios de strike iguales
 
 class StrapSpread(Portfolio):
     
     def __init__(self, strike1, strike2, strike3, maturity, premium1 = 0, 
                  premium2 = 0, premium3 = 0):
+        
+        strike1, strike2 = val.validate_strikes(strike1, strike2, "Equal")
+        strike1, strike3 = val.validate_strikes(strike1, strike3, "Equal")
         
         self._call01 = Call(strike=strike1,
                             maturity=maturity,
@@ -232,11 +281,13 @@ class StrapSpread(Portfolio):
         super().__init__(self._call01, self._call02, self._put01)
 
 #%% Strangle
-    #### Precios de strike put menor a call
     
 class StrangleSpread(Portfolio):
     
     def __init__(self, strike1, strike2, maturity, premium1 = 0, premium2 = 0):
+        
+        
+        strike1, strike2 = val.validate_strikes(strike1, strike2, "Greater")
         
         self._call01 = Call(strike=strike1,
                             maturity=maturity,

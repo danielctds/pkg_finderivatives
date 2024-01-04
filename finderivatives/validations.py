@@ -106,25 +106,76 @@ def validate_spot(spot):
 
 
 
-def validate_strikes_bull_spread_call(strike1, strike2):
+def validate_strikes(strike1, strike2, validation):
+    
+    validations = ["Less", "Greater", "Equal"]
+    
+    if validation not in validations:
+        raise ValueError("Invalid validation type. Expected one of: %s" % validations)
+    
     strike1 = validate_strike(strike1)
     strike2 = validate_strike(strike2)
     
+    if validation == "Less":
+        try:
+            # Validate value
+            if strike1 >= strike2:
+                raise ValueError
+                
+            else:
+                return strike1, strike2
+    
+        except ValueError:
+            message = 'The "strike1" must be less than "strike2"'
+            raise ValueError(message)
+    
+    if validation == "Greater":
+        try:
+            # Validate value
+            if strike1 <= strike2:
+                raise ValueError
+                
+            else:
+                return strike1, strike2
+    
+        except ValueError:
+            message = 'The "strike1" must be greater than "strike2"'
+            raise ValueError(message)
+    
+    if validation == "Equal":
+        try:
+            # Validate value
+            if strike1 != strike2:
+                raise ValueError
+                
+            else:
+                return strike1, strike2
+    
+        except ValueError:
+            message = 'The "strike1" must be equal to "strike2"'
+            raise ValueError(message)
+
+def validate_strikes_butterly(strike1, strike2, strike3, strike4):
+    strike1 = validate_strike(strike1)
+    strike2 = validate_strike(strike2)
+    strike3 = validate_strike(strike3)
+    strike4 = validate_strike(strike4)
+    
+    strike3, strike4 = validate_strikes(strike3, strike4, "Equal")
+    
     try:
-        # Validate value
-        if strike1 >= strike2:
+        if (strike3 - strike1) != (strike2 - strike3):
             raise ValueError
             
         else:
-            return strike1, strike2
+            return strike1, strike2, strike3, strike4
 
     except ValueError:
-        message = 'The "strike1" must be less than "strike2"'
+        message = 'The "strike1", ""strike2" and ""strike3"  must be x distant '
         raise ValueError(message)
-
+        
     
-
-
+    
 
 #%% Direct execution
 if __name__ == '__main__':
