@@ -6,11 +6,9 @@
 Welcome to finderivatives's documentation!
 ******************************************
 
-🚧 ¡Under construction! 🚧
+This is a financial derivatives library that allows you to calculate the valuation and payoff of European Put and Call options. Additionally, it allows you to build portfolios of options to create different strategies.
 
-Esta es una librería de derivados financieros que permite calcular la valoración y el payoff de opciones europeas Put y Call. Adicionalmente, permite construir portfolios de opciones para crear diferentes estrategias.
-
-De manera predeterminada *finderivatives* cuenta con las siguientes estrategias:
+By default *finderivatives* has the following strategies:
 
 - Covered Call
 - Reverse Covered Call
@@ -26,6 +24,47 @@ De manera predeterminada *finderivatives* cuenta con las siguientes estrategias:
 - Strip
 - Strap
 - Strangle
+
+Installation
+============
+
+To install finderivatives it is necessary to have the numpy and scipy libraries previously installed. These libraries allow the calculation processes to be executed in a robust manner.
+
+Currently finderivatives is available in the Python Package Index (PyPI) repository.
+
+PyPI Repository
+---------------
+
+To install from PyPI, you must execute the following command from the console
+
+.. code-block:: bash
+    :caption: Caption del codigo
+    
+    pip install finderivatives
+
+
+Repositorio Anaconda
+--------------------
+
+.. code-block:: bash
+   
+   conda install -c danielctds finderivatives
+
+
+
+Motivation
+==========
+
+Derivatives are financial products widely used in the financial industry for speculative and risk management purposes. Understanding it from the most basic instruments can sometimes be difficult and abstract considering that its value is based on an underlying asset.
+
+This library has the purpose of contributing to the academic community in understanding the most basic concepts of financial derivatives, taking valuation concepts from theory to practice using Python.
+
+In the future, it is expected to strengthen the library's applications with more complex instruments and new valuation methods in accordance with market trends.
+
+
+
+
+
 
 .. toctree::
    :maxdepth: 2
@@ -54,30 +93,3 @@ Indices and tables
 
 
 
-Instalacion
-===========
-
-
-
-Repositorio PyPi
-----------------
-
-.. code-block:: bash
-    :caption: Caption del codigo
-    
-    pip install finderivatives
-
-
-Repositorio Anaconda
---------------------
-
-.. code-block:: bash
-   
-   conda install -c danielctds finderivatives
-
-
-
-Motivacion
-==========
-
-¡Under construction! 🚧
