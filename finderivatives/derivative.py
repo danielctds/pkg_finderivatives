@@ -12,8 +12,9 @@ from finderivatives import validations as val
 #%%
 class EuropeanOption():
     
-    def __init__(self, strike, maturity, position, premium=0):
+    def __init__(self, strike, notional, maturity, position, premium=0):
         self._strike = val.validate_strike(strike)
+        self._notional = val.validate_notional(notional)
         self._maturity = val.validate_maturity(maturity)
         self._dt = val.validate_maturity(maturity)
         self._position = val.validate_position(position)

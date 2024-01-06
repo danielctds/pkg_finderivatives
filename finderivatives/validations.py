@@ -40,6 +40,26 @@ def validate_strike(strike):
         raise TypeError(message) from exc
 
 
+
+def validate_notional(notional):
+    try:
+        if not( (isinstance(notional, int)) | (isinstance(notional, float)) ):
+            raise TypeError
+        elif notional <= 0:
+            raise ValueError
+        else:
+            return notional
+            
+    except TypeError as exc:
+        message = 'The argument "notional" must be of type int or float'
+        raise TypeError(message) from exc
+    
+    except ValueError:
+        message = 'The argument "notional" must be a positive value'
+        raise ValueError(message)
+
+
+
 def validate_premium(premium):
     try:
         if (isinstance(premium, int)) | (isinstance(premium, float)):

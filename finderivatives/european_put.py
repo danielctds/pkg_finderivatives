@@ -9,8 +9,8 @@ from finderivatives.derivative import EuropeanOption
 #%%  Put
 class Put(EuropeanOption):
     
-    def __init__(self, strike, maturity, position, premium=0):
-        super().__init__(strike, maturity, position, premium)
+    def __init__(self, strike, notional, maturity, position, premium=0):
+        super().__init__(strike, notional, maturity, position, premium)
     
     
     def payoff(self):
@@ -24,7 +24,7 @@ class Put(EuropeanOption):
             DESCRIPTION.
 
         """
-        self._payoff = np.maximum(0, self._strike-self._spot) * self._position
+        self._payoff = np.maximum(0, self._strike-self._spot) * self._notional * self._position
         return self._payoff
     
     
@@ -39,7 +39,7 @@ class Put(EuropeanOption):
             DESCRIPTION.
 
         """
-        self._profit = self.payoff() - self._premium * self._position
+        self._profit = self.payoff() - self._premium * self._notional * self._position
         return self._profit
     
     
@@ -65,7 +65,7 @@ class Put(EuropeanOption):
         self._pricing = (
             self._strike * np.exp(-self._r*(self._dt)) * self._n_d2
             - self._spot * self._n_d1
-            ) * self._position
+            ) * self._notional * self._position 
         return self._pricing
     
     

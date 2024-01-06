@@ -3,7 +3,8 @@ from finderivatives import validations as val
 
 class UnderlyingAsset():
     
-    def __init__(self, position):
+    def __init__(self, notional, position):
+        self._notional = val.validate_notional(notional)
         self._position = val.validate_position(position)
         
     def set_spot(self, spot):
@@ -30,7 +31,7 @@ class UnderlyingAsset():
             DESCRIPTION.
 
         """
-        self._payoff = self._spot * self._position
+        self._payoff = self._spot * self._notional * self._position
         return self._payoff
     
     
@@ -44,7 +45,7 @@ class UnderlyingAsset():
             DESCRIPTION.
 
         """
-        self._profit = self._spot * self._position
+        self._profit = self._spot * self._notional * self._position
         return self._profit
     
     
@@ -58,7 +59,7 @@ class UnderlyingAsset():
             DESCRIPTION.
 
         """
-        self._pricing = self._spot * self._position
+        self._pricing = self._spot * self._notional * self._position
         return self._pricing
 
 
