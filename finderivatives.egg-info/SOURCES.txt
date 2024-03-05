@@ -1,15 +1,15 @@
 LICENSE
 README.md
 pyproject.toml
+setup.py
 finderivatives/__init__.py
 finderivatives/derivative.py
-finderivatives/derivative_old.py
 finderivatives/errors.py
 finderivatives/european_call.py
 finderivatives/european_put.py
 finderivatives/portfolio.py
 finderivatives/strategies.py
-finderivatives/untitled0.py
+finderivatives/underlying.py
 finderivatives/validations.py
 finderivatives.egg-info/PKG-INFO
 finderivatives.egg-info/SOURCES.txt

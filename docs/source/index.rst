@@ -35,21 +35,12 @@ Currently finderivatives is available in the Python Package Index (PyPI) reposit
 PyPI Repository
 ---------------
 
-To install from PyPI, you must execute the following command from the console
+To install from PyPI, you must execute the following command from the console:
 
 .. code-block:: bash
     :caption: Caption del codigo
     
     pip install finderivatives
-
-
-Repositorio Anaconda
---------------------
-
-.. code-block:: bash
-   
-   conda install -c danielctds finderivatives
-
 
 
 Motivation

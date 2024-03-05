@@ -16,8 +16,8 @@ class Call(EuropeanOption):
         position (int or float): _description_
         premium (int, optional): _description_. Defaults to 0.
     """
-    def __init__(self, strike, maturity, position, premium=0):
-        super().__init__(strike, maturity, position, premium)
+    def __init__(self, strike, notional, maturity, position, premium=0):
+        super().__init__(strike, notional, maturity, position, premium)
         
         
     def payoff(self):
